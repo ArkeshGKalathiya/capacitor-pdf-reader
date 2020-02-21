@@ -1,0 +1,57 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:2:3-16:14
+INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:2:3-16:14
+INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:2:3-16:14
+INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:2:3-16:14
+INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:2:3-16:14
+INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:2:3-16:14
+INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:2:3-16:14
+	package
+		ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:3:7-66
+		INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml
+		ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:2:3-16:14
+		INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml
+		ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:2:3-16:14
+		INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:2:13-71
+application
+ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:5:7-15:21
+activity#com.netgalaxystudios.pdfreader.PDFViewActivity
+ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:6:11-14:22
+	android:label
+		ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:9:15-47
+	android:theme
+		ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:8:15-49
+	android:name
+		ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:7:15-76
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:10:15-13:31
+action#android.intent.action.MAIN
+ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:11:19-71
+	android:name
+		ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:11:27-68
+category#android.intent.category.LAUNCHER
+ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:12:19-79
+	android:name
+		ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml:12:29-76
+uses-sdk
+INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml
+INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml
+INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml
+INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml
+		ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml
+		ADDED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\plugin\CapacitorPdfReader\PdfReader\node_modules\netgalaxy-pdf-reader\android\src\main\AndroidManifest.xml

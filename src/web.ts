@@ -2,6 +2,7 @@ import { WebPlugin } from '@capacitor/core';
 import { NGalaxyPDFReaderPlugin } from './definitions';
 
 export class NGalaxyPDFReaderWeb extends WebPlugin implements NGalaxyPDFReaderPlugin {
+	
   constructor() {
     super({
       name: 'NGalaxyPDFReader',
@@ -9,8 +10,7 @@ export class NGalaxyPDFReaderWeb extends WebPlugin implements NGalaxyPDFReaderPl
     });
   }
 
-  async echo(options: { value: string }): Promise<{value: string}> {
-    console.log('ECHO', options);
+  async openPDF(options: { value: string }): Promise<{value: string}> {
     return options;
   }
 }
