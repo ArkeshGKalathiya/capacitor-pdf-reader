@@ -641,6 +641,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gray
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -929,6 +930,10 @@ dimen tooltip_precise_anchor_threshold
 dimen tooltip_vertical_padding
 dimen tooltip_y_offset_non_touch
 dimen tooltip_y_offset_touch
+dimen treeview_bottom_padding
+dimen treeview_left_padding
+dimen treeview_right_padding
+dimen treeview_top_padding
 drawable abc_ab_share_pack_mtrl_alpha
 drawable abc_action_bar_item_background_material
 drawable abc_btn_borderless_material
@@ -1046,7 +1051,10 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_arrow_drop_down
+drawable ic_arrow_drop_up
 drawable ic_bookmark_white_24dp
+drawable ic_folder
 drawable ic_launcher
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -1160,11 +1168,14 @@ id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
 id navigation_header_container
+id node_header
+id node_items
 id none
 id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id open_toc
 id outline
 id packed
 id parallax
@@ -1172,7 +1183,6 @@ id parent
 id parentPanel
 id parent_matrix
 id pdfView
-id pickFile
 id pin
 id progress_circular
 id progress_horizontal
@@ -1180,6 +1190,7 @@ id radio
 id right
 id right_icon
 id right_side
+id rl_list_item
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1242,6 +1253,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tree_items
 id uniform
 id unlabeled
 id up
@@ -1303,6 +1315,7 @@ layout activity_reader
 layout bridge_layout_main
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
+layout child
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1334,6 +1347,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout parent
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -1923,6 +1937,7 @@ style Widget_MaterialComponents_TextInputLayout_OutlinedBox
 style Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense
 style Widget_MaterialComponents_Toolbar
 style Widget_Support_CoordinatorLayout
+style myDialog
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

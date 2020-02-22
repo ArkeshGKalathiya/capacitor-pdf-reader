@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/pickFile"
+        android:id="@+id/open_toc"
         android:icon="@drawable/ic_bookmark_white_24dp"
         android:title="@string/pick_file"
         app:showAsAction="always" />
