@@ -13,6 +13,7 @@ import android.view.ContextThemeWrapper;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
@@ -31,6 +32,7 @@ public class PDFViewActivity extends AppCompatActivity implements OnLoadComplete
     PDFView pdfView;
     List<com.shockwave.pdfium.PdfDocument.Bookmark> toc = null;
     View treeView = null;
+    AlertDialog tocDialog = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,6 +58,7 @@ public class PDFViewActivity extends AppCompatActivity implements OnLoadComplete
                 .spacing(10) // in dp
                 .pageFitPolicy(FitPolicy.BOTH).onLoad(this)
                 .load();
+
 
 
 
@@ -94,12 +97,16 @@ public class PDFViewActivity extends AppCompatActivity implements OnLoadComplete
             return;
         }
 
+        createTreeView();
+
+
+    }
+
+    public void createTreeView(){
         TreeNode root = TreeNode.root();
         populateRoot(root,toc,0);
         treeView =  new AndroidTreeView(getApplicationContext(), root).getView();
         treeView.setPadding(16,16,16,16);
-
-
     }
 
 
@@ -108,13 +115,31 @@ public class PDFViewActivity extends AppCompatActivity implements OnLoadComplete
         if(tree == null || tree.size() == 0)
             return;
 
-        for (com.shockwave.pdfium.PdfDocument.Bookmark b : tree){
-            MyHolder.IconTreeItem childItem = new MyHolder.IconTreeItem(R.drawable.ic_folder, b.getTitle());
-            TreeNode child = new TreeNode(childItem).setViewHolder(new MyHolder(getApplicationContext(), false, R.layout.child, 0 ));
+        for (final com.shockwave.pdfium.PdfDocument.Bookmark b : tree){
+
+            int icon = R.drawable.ic_folder;
+            if(!b.hasChildren()){
+                icon = R.drawable.ic_bookmark_white_24dp;
+            }
+
+            MyHolder.IconTreeItem childItem = new MyHolder.IconTreeItem( icon, b.getTitle());
+            TreeNode child = new TreeNode(childItem).setViewHolder(new MyHolder(getApplicationContext(), b.hasChildren() , R.layout.child, level*40 ));
             child.setExpanded(true);
             child.setSelectable(true);
             if(b.hasChildren()){
                 populateRoot(child,b.getChildren(),level+1);
+            }else{
+                child.setClickListener(new TreeNode.TreeNodeClickListener() {
+                    @Override
+                    public void onClick(TreeNode node, Object value) {
+                        if(pdfView != null){
+                            pdfView.jumpTo((int)b.getPageIdx(),true);
+                            if(tocDialog != null){
+                                tocDialog.hide();
+                            }
+                        }
+                    }
+                });
             }
             root.addChild(child);
         }
@@ -123,6 +148,11 @@ public class PDFViewActivity extends AppCompatActivity implements OnLoadComplete
 
     void showTOC() {
 
+        if(tocDialog != null){
+            tocDialog.show();
+            return;
+        }
+
         AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.myDialog));
         builder.setView(treeView);
         builder.setPositiveButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
@@ -130,9 +160,13 @@ public class PDFViewActivity extends AppCompatActivity implements OnLoadComplete
             public void onClick(DialogInterface dialog, int which) {
             }
         });
-        AlertDialog tocdialog = builder.create();
-        tocdialog.setTitle("Table Of Content");
-        tocdialog.show();
+        AlertDialog dialog = builder.create();
+        dialog.setTitle("Table Of Content");
+        dialog.show();
+
+        tocDialog = dialog;
+
+
     }
 
 }
