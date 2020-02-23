@@ -15,10 +15,9 @@ export class NGalaxyPDFReaderWeb extends WebPlugin {
             platforms: ['web']
         });
     }
-    echo(options) {
+    openPDF(options) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log('ECHO', options);
-            return options;
+            return { value: "" };
         });
     }
 }

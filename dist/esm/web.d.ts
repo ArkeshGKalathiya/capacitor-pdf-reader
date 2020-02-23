@@ -2,8 +2,9 @@ import { WebPlugin } from '@capacitor/core';
 import { NGalaxyPDFReaderPlugin } from './definitions';
 export declare class NGalaxyPDFReaderWeb extends WebPlugin implements NGalaxyPDFReaderPlugin {
     constructor();
-    echo(options: {
-        value: string;
+    openPDF(options: {
+        pdfPath: string;
+        title: string;
     }): Promise<{
         value: string;
     }>;
