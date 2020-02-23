@@ -11,6 +11,7 @@ export class NGalaxyPDFReaderWeb extends WebPlugin implements NGalaxyPDFReaderPl
   }
 
   async openPDF(options: { pdfPath: string, title : string }): Promise<{value: string}> {
+	console.log(options);
     return {value:""};
   }
 }
