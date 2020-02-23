@@ -10,20 +10,23 @@ import com.getcapacitor.PluginMethod;
 
 @NativePlugin()
 public class NGalaxyPDFReader extends Plugin {
-
+	
     @PluginMethod()
     public void openPDF(PluginCall call) {
-        String value = call.getString("value");
+
+        String pdfPath = call.getString("pdfPath");
+		String title = call.getString("title"); 
 
         JSObject ret = new JSObject();
 
 
         Intent intent = new Intent(getActivity().getBaseContext(), PDFViewActivity.class);
-        intent.putExtra("pdfPath",value);
+        intent.putExtra("pdfPath",pdfPath);
+		intent.putExtra("title",title);
         getActivity().startActivity(intent);
 
-
-        ret.put("value", value);
+        ret.put("value", title);
         call.success(ret);
+
     }
 }

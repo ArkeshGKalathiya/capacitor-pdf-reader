@@ -13,7 +13,6 @@ import android.view.ContextThemeWrapper;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
@@ -42,13 +41,17 @@ public class PDFViewActivity extends AppCompatActivity implements OnLoadComplete
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+		String pdfPath = getIntent().getExtras().getString("pdfPath");
+		String title = getIntent().getExtras().getString("title");
+
         if (getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
+			getSupportActionBar().setTitle(title);
         }
 
-        try{
-            String pdfPath = getIntent().getExtras().getString("pdfPath");
+        try{    
+			
             File file = new File(pdfPath);
             pdfView = (PDFView) findViewById(R.id.pdfView);
             pdfView.setBackgroundColor(Color.DKGRAY);
@@ -58,10 +61,6 @@ public class PDFViewActivity extends AppCompatActivity implements OnLoadComplete
                 .spacing(10) // in dp
                 .pageFitPolicy(FitPolicy.BOTH).onLoad(this)
                 .load();
-
-
-
-
 
         }catch (NullPointerException ex){
             Log.d("","");

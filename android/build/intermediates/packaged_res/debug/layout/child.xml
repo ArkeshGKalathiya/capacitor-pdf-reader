@@ -22,6 +22,6 @@
         android:layout_toRightOf="@id/image"
         android:text="List Item"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-        android:textStyle="bold" />
+        android:textStyle="normal" />
 
 </RelativeLayout>

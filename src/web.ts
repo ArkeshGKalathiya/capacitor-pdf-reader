@@ -10,8 +10,8 @@ export class NGalaxyPDFReaderWeb extends WebPlugin implements NGalaxyPDFReaderPl
     });
   }
 
-  async openPDF(options: { value: string }): Promise<{value: string}> {
-    return options;
+  async openPDF(options: { pdfPath: string, title : string }): Promise<{value: string}> {
+    return {value:""};
   }
 }
 

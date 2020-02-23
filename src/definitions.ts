@@ -5,5 +5,5 @@ declare module "@capacitor/core" {
 }
 
 export interface NGalaxyPDFReaderPlugin {
-	openPDF(options: { value: string }): Promise<{value: string}>;
+	openPDF(options: { pdfPath: string, title : string }): Promise<{value: string}>;
 }
