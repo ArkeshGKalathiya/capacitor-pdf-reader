@@ -13,6 +13,25 @@
 		android:id="@+id/pdfView"
 		android:layout_below="@id/toolbar"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"/>
+		android:layout_height="match_parent">
+
+		<TextView
+			android:id="@+id/pager"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:layout_marginRight="16dp"
+			android:background="@drawable/rounded_rectangle"
+			android:singleLine="true"
+			android:paddingHorizontal="16dp"
+			android:paddingVertical="8dp"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:text=""
+			android:textColor="#FFFFFF"
+			android:textStyle="bold"
+			android:textSize="14dp" />
+
+	</com.github.barteksc.pdfviewer.PDFView>
 
 </RelativeLayout>

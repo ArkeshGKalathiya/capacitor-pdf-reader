@@ -13,9 +13,11 @@ import android.view.ContextThemeWrapper;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
+import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
 import com.github.barteksc.pdfviewer.util.FitPolicy;
 import com.netgalaxystudios.pdfreader.netgalaxypdfreader.R;
 import com.netgalaxystudios.pdfreader.tree.AndroidTreeView;
@@ -26,7 +28,7 @@ import java.io.File;
 import java.util.List;
 
 
-public class PDFViewActivity extends AppCompatActivity implements OnLoadCompleteListener {
+public class PDFViewActivity extends AppCompatActivity implements OnLoadCompleteListener, OnPageChangeListener {
 
     PDFView pdfView;
     List<com.shockwave.pdfium.PdfDocument.Bookmark> toc = null;
@@ -56,10 +58,11 @@ public class PDFViewActivity extends AppCompatActivity implements OnLoadComplete
             pdfView = (PDFView) findViewById(R.id.pdfView);
             pdfView.setBackgroundColor(Color.DKGRAY);
             pdfView.fromFile(file)
-                .defaultPage(1)
+                .defaultPage(0)
                 .enableAnnotationRendering(true)
                 .spacing(10) // in dp
                 .pageFitPolicy(FitPolicy.BOTH).onLoad(this)
+                    .onPageChange(this)
                 .load();
 
         }catch (NullPointerException ex){
@@ -85,8 +88,23 @@ public class PDFViewActivity extends AppCompatActivity implements OnLoadComplete
         return super.onOptionsItemSelected(item);
     }
 
+    public void setPagerView(int current, int total){
+        TextView view = (TextView)findViewById(R.id.pager);
+        if(view != null){
+            String finalString = current+" / "+total;
+            view.setText(finalString);
+        }
+    }
+
+    @Override
+    public void onPageChanged(int current, int total){
+        setPagerView(current+1,total);
+    }
+
     @Override
     public void loadComplete(int nbPages) {
+
+        setPagerView(0,0);
 
         com.shockwave.pdfium.PdfDocument.Meta meta = pdfView.getDocumentMeta();
         toc = pdfView.getTableOfContents();
