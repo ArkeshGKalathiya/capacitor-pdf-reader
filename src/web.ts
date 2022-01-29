@@ -1,24 +1,16 @@
 import { WebPlugin } from '@capacitor/core';
-import { NGalaxyPDFReaderPlugin } from './definitions';
 
-export class NGalaxyPDFReaderWeb extends WebPlugin implements NGalaxyPDFReaderPlugin {
-	
-  constructor() {
-    super({
-      name: 'NGalaxyPDFReader',
-      platforms: ['web']
-    });
+import type { NGalaxyPDFReaderPlugin } from './definitions';
+
+export class NGalaxyPDFReaderWeb
+  extends WebPlugin
+  implements NGalaxyPDFReaderPlugin {
+  async echo(options: { value: string }): Promise<{ value: string }> {
+    console.log('ECHO', options);
+    return options;
   }
-
-  async openPDF(options: { pdfPath: string, title : string }): Promise<{value: string}> {
-	console.log(options);
-    return {value:""};
+  async openPDF(options: { pdfPath: string, title: string }): Promise<{ value: string }> {
+    console.log(options);
+    return { value: "" };
   }
 }
-
-const NGalaxyPDFReader = new NGalaxyPDFReaderWeb();
-
-export { NGalaxyPDFReader };
-
-import { registerWebPlugin } from '@capacitor/core';
-registerWebPlugin(NGalaxyPDFReader);

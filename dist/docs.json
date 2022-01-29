@@ -1,0 +1,47 @@
+{
+  "api": {
+    "name": "NGalaxyPDFReaderPlugin",
+    "slug": "ngalaxypdfreaderplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "echo",
+        "signature": "(options: { value: string; }) => Promise<{ value: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ value: string; }"
+          }
+        ],
+        "returns": "Promise<{ value: string; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "echo"
+      },
+      {
+        "name": "openPDF",
+        "signature": "(options: { pdfPath: string; title: string; }) => Promise<{ value: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ pdfPath: string; title: string; }"
+          }
+        ],
+        "returns": "Promise<{ value: string; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "openpdf"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}

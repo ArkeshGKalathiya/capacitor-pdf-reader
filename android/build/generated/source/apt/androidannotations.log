@@ -1,7 +1,0 @@
-15:17:45.855 [Task worker for ':' Thread 2] ERROR o.a.i.p.ModelValidator:74 - Resource name not found in R.layout: pdfView
-15:17:45.855 [Task worker for ':' Thread 2] ERROR o.a.i.p.ModelValidator:74 - The AndroidManifest.xml file contains the original component, and not the AndroidAnnotations generated component. Please register PDFViewActivity_ instead of PDFViewActivity
-15:17:45.855 [Task worker for ':' Thread 2] WARN  o.a.i.p.ModelValidator:84 - Element com.netgalaxystudios.pdfreader.PDFViewActivity invalidated by EActivityHandler
-15:17:45.858 [Task worker for ':' Thread 2] ERROR o.a.i.p.ModelValidator:74 - Resource name not found in R.menu: pickFile
-15:17:45.858 [Task worker for ':' Thread 2] WARN  o.a.i.p.ModelValidator:84 - Element com.netgalaxystudios.pdfreader.PDFViewActivity invalidated by OptionsMenuHandler
-15:35:22.573 [Task worker for ':' Thread 2] ERROR o.a.i.p.ModelValidator:74 - org.androidannotations.annotations.ViewById can only be used in a class annotated with @org.androidannotations.annotations.EActivity, @interface org.androidannotations.annotations.EViewGroup, @interface org.androidannotations.annotations.EView, @interface org.androidannotations.annotations.EBean, @interface org.androidannotations.annotations.EFragment.
-15:35:22.573 [Task worker for ':' Thread 2] WARN  o.a.i.p.ModelValidator:84 - Element pdfView invalidated by ViewByIdHandler

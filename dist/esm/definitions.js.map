@@ -1,1 +1,1 @@
-{"version":3,"file":"definitions.js","sourceRoot":"","sources":["../../src/definitions.ts"],"names":[],"mappings":""}
+{"version":3,"file":"definitions.js","sourceRoot":"","sources":["../../src/definitions.ts"],"names":[],"mappings":"","sourcesContent":["export interface NGalaxyPDFReaderPlugin {\n  echo(options: { value: string }): Promise<{ value: string }>;\n  openPDF(options: { pdfPath: string, title: string }): Promise<{ value: string }>;\n}\n"]}
